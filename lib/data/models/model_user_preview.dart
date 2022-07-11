@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:social_media/domain/entities/user_preview.dart';
 
 class ModelUserPreview extends Equatable{
   ModelUserPreview({
@@ -31,6 +32,13 @@ class ModelUserPreview extends Equatable{
     _data['picture'] = picture;
     return _data;
   }
+
+  UserPreview toEntity() => UserPreview(
+      id: id,
+      title: title,
+      firstName: firstName,
+      lastName: lastName,
+      picture: picture);
 
   @override
   // TODO: implement props
